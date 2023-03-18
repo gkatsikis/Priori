@@ -9,18 +9,7 @@ const HomeScreen = (props) => {
     <View>
       <NavBar />
       <Text style={styles.text}>HomeScreen</Text>
-      <TouchableOpacity
-        onPress={() => props.navigation.navigate("List")}
-        style={styles.touchableOp}
-      >
-        <Text>Go to List</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => props.navigation.navigate("Profile")}
-        style={styles.touchableOp}
-      >
-        <Text>Go to Profile</Text>
-      </TouchableOpacity>
+      
     </View>
   );
 };
@@ -30,9 +19,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     verticalMargin: 10,
-  },
-  touchableOp: {
-    marginVertical: 10,
   },
 });
 
