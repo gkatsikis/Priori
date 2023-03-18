@@ -7,7 +7,7 @@ const HomeScreen = (props) => {
 
   return (
     <View>
-      <NavBar />
+      <NavBar navigation={props.navigation} />
       <Text style={styles.text}>HomeScreen</Text>
       
     </View>

@@ -7,18 +7,20 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+import { Icon } from "react-native-elements";
 
-const NavBar = () => {
+const NavBar = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => props.navigation.navigate("Profile")}
+        icon={<Icon name="user" type="font-awesome" size={15} color="white" />}
+        onPress={() => navigation.navigate("Profile")}
         style={styles.touchableOp}
       >
         <Text>Profile</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => props.navigation.navigate("List")}
+        onPress={() => navigation.navigate("List")}
         style={styles.touchableOp}
       >
         <Text>Go to List</Text>
@@ -36,14 +38,16 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginTop: 10,
   },
-  touchableOp: {
-    backgroundColor: "lightblue",
-    padding: 10,
-    borderRadius: 10,
-    margin: 0,
-    marginLeft: 10,
-    marginRight: 10,
-  },
+  //   touchableOp: {
+  //     backgroundColor: "lightblue",
+  //     padding: 10,
+  //     borderRadius: 20,
+  //     margin: 0,
+  //     marginLeft: 10,
+  //     marginRight: 10,
+  //     color: "white",
+  //     fontWeight: "bold",
+  //   },
 });
 
 export default NavBar;

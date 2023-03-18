@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, StyleSheet, View, Button, TouchableOpacity, FlatList } from 'react-native'
 
-const ListScreen = () => {
+const ListScreen = ({ navigation }) => {
 
     let tasks = [
         { name: "Study", key: "1" },
@@ -23,11 +23,6 @@ const ListScreen = () => {
                     return <Text style={styles.textStyle}>{item.name}</Text>
                 }}
             />
-            <Button
-                title="Go to Home"
-                onPress={(props) => props.navigation.navigate("Home")}
-                style={styles.buttonStyle}
-            />
         </View>
     )
 }
@@ -41,14 +36,6 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         textAlign: "center",
     },
-    // style button element to be centered and evenly spaced and very small
-    buttonStyle: {
-        marginVertical: 10,
-        textAlign: "center",
-        justifyContent: "space-evenly",
-        fontSize: 5,
-
-    }
 })
 
 export default ListScreen
